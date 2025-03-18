@@ -1,8 +1,16 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(../fonts/RELIGATH-Demo.otf);
 
-/*https://www.youtube.com/watch?v=H8ThscWsQV8&list=PLA9oyBlTfuCguMi9PTwvA2ewTPJ7701EI 
-Agora so falta icones*/
+/*Milchella Font. Swanley Free Font. Borisna Font */
+
+:root {
+    --primary-color: #e68bbe;
+    --secondary-color: #eea1cd;
+    --accent-color:  #f4b8da;
+    --text-color: #f9cee7;
+    --background-color: #fde4f2;
+}
 
 * {
     margin: 0px;
@@ -13,7 +21,7 @@ Agora so falta icones*/
 
 body {
     background-color: rgb(233, 143, 177);
-    background: radial-gradient(circle, rgba(233, 143, 177, 1) 0%, rgba(228, 128, 145, 1) 100%); /* Adicione esta linha */
+    background: radial-gradient(circle, #f4b8da 0%, #f4b8 100%); /* Adicione esta linha */
 }
 article#msg {
     margin-top: 110px;
@@ -23,8 +31,9 @@ article#msg {
     font-weight: 100;
 }
 article#msg > h1 {
+    font-family: "Religath";
     text-transform: uppercase;
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 10px;
     padding: 10px;
 }
@@ -81,6 +90,7 @@ article#form {
     padding: 0px;
 }
 button {
+    color: #e68bbe;
     padding: 10px;
     margin: auto;
     font-size: 0.95em;
