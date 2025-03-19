@@ -18,7 +18,7 @@
 }
 
 body {
-    background: linear-gradient(#1f0012);
+    background-color: #1f0012;
     padding-top: 50px; /* Ajuste conforme a altura do header */
 }
 
@@ -37,23 +37,27 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between; /* Alinha os itens nas extremidades */
     align-items: center; /* Centraliza verticalmente */
 }
 
 header h1 {
+    text-transform: uppercase;
     text-align: left;
     font-family: "Religath";
     color: #fde4f2;
-    margin-left: 10px; /* Adicione um espaçamento à esquerda, se necessário */
+    margin-left: 15px; /* Adicione um espaçamento à esquerda, se necessário */
 }
 
-nav a {
+div#icons {
+    transform: scale(1.1);
+    margin-left: 42%;
+}
+
+div#icons a {
     text-align: right;
     color: white;
     font-family: "Lexend Deca";
     text-decoration: none;
-    margin-right: 10px; /* Adicione um espaçamento à direita, se necessário */
 }
 
 nav span {
@@ -63,6 +67,7 @@ nav span {
 main {
     padding: 20px;
     background: radial-gradient(circle, #ac166b 0%, rgba(27, 5, 19, 0.533) 100%);
+    background-color: #1f0012;
     color: #fde4f2;
     width: 100%;
     height: 94vh;
@@ -103,7 +108,8 @@ form {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.247);
 }
 
-input#data {
+form > input#data {
+    background: transparent;
     border: none;
     outline: none;
     color: #eea1cd;
@@ -142,6 +148,7 @@ section article {
 }
 
 section#biblio h3 {
+    text-transform: uppercase;
     font-family: "Religath";
     color: #fff1f9;
     text-align: center;
