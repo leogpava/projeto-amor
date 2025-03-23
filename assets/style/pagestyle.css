@@ -44,13 +44,13 @@ header h1 {
     text-transform: uppercase;
     text-align: left;
     font-family: "Religath";
-    width: 30%;
+    width: 50%;
     color: #fde4f2;
     margin-left: 15px; /* Adicione um espaçamento à esquerda, se necessário */
 }
 
 div#icons {
-    width: 30%;
+    width: 50%;
     transform: scale(1.0);
     margin-left: 38%;
 }
