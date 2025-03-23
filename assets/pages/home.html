@@ -39,16 +39,49 @@
             <form action="#" method="post">
                 <label for="data">Data do date:</label>
                 <input type="date" id="data" required>
-                <button type="button">Buscar</button>
+                <button type="button" onclick="clicar()" required>Buscar</button>
             </form>
-            <p id="sucesso">Date encontrado com sucesso! 👇</p>
+            <p id="sucesso"></p>
         </section>
         <section id="res">
             <article>
-                <h3>Date 24/04/2024</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum repudiandae repellendus in optio eaque, deleniti rem deserunt voluptates illum accusamus veritatis enim iusto nesciunt quaerat perferendis? Eos iste ab placeat.</p>
-                <img src="../images/1.png" alt="" width="200px">
+                <h3 id="dia">Placeholder</h3>
+                <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum repudiandae repellendus in optio eaque, deleniti rem deserunt voluptates illum accusamus veritatis enim iusto nesciunt quaerat perferendis? Eos iste ab placeat.</p>
+                <img src="../images/1.png" alt="" width="200px" id="innerimg">
+                <video src="" id="video" controls></video>
             </article>
         </section>
 </body>
+<script>
+        let secdate = document.getElementById("res");
+        let article = secdate.querySelector("article");
+        let data = document.getElementById("data");
+        let sucesso = document.getElementById("sucesso");
+        let dia = document.getElementById("dia")
+        let imagem = document.getElementById("innerimg")
+        let texto = document.getElementById("para")
+        let video = document.getElementById("video")
+
+    function clicar() {
+        if (data.value == "2023-04-28") {
+            sucesso.innerHTML = `<p>Date encontrado com sucesso! 👇</p>` 
+            article.style.display = "block";
+            secdate.style.display = "block";
+            sucesso.style.display = "block";
+
+            dia.innerHTML = `<p>Date 28/04/2023 💗</p>` 
+            video.src = "../videos/vinteoito.mp4"
+            texto.innerHTML = `<p>Esse foi o dia em que nos vimos pessoalmente pela primeira vez.</p> <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum repudiandae repellendus in optio eaque, deleniti rem deserunt voluptates illum accusamus veritatis enim iusto nesciunt quaerat perferendis? Eos iste ab placeat.</p>  <p>Aqui temos o único registro decente desse dia:</p>` 
+            imagem.src = ""
+        } else if (data.value == "2025-03-21") {
+            sucesso.innerHTML = `<p>Date encontrado com sucesso! 👇</p>` 
+
+        } else if (data.value == "2025-03-20") {
+
+        } else {
+            secdate.style.display = "none";
+            sucesso.innerHTML = `<p>Date não encontrado.</p>` 
+        }
+    }  
+</script>
 </html>
