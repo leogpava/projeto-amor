@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url(../fonts/RELIGATH-Demo.otf);
+/*https://www.schemecolor.com/simple-pink-color-scheme.php*/
 
 :root {
     --primary-color: #e68bbe;
@@ -18,7 +19,7 @@
 }
 
 body {
-    background-color: #1f0012;
+    background-color: #D56094;
     padding-top: 50px; /* Ajuste conforme a altura do header */
 }
 
@@ -27,7 +28,6 @@ header {
     width: 100%;
     background-color: #e68bbe;
     position: fixed;
-    width: 100%; /* Certifique-se de que o header ocupe toda a largura */
     top: 0;
     z-index: 1000;
     text-align: center;
@@ -41,22 +41,25 @@ nav {
 }
 
 header h1 {
+    cursor: default;
+    position: absolute;
     text-transform: uppercase;
     text-align: left;
     font-family: "Religath";
-    width: 50%;
+    width: 80%;
     color: #fde4f2;
-    margin-left: 15px; /* Adicione um espaçamento à esquerda, se necessário */
+    margin-left: 15px; 
 }
 
 div#icons {
-    width: 50%;
-    transform: scale(1.0);
-    margin-left: 38%;
+    width: 300px;
+    transform: scale(1.1);
+    margin-left: 45%;
+    text-align: right;
+
 }
 
 div#icons a {
-    text-align: right;
     color: white;
     font-family: "Lexend Deca";
     text-decoration: none;
@@ -68,8 +71,7 @@ nav span {
 
 main {
     padding: 20px;
-    background: radial-gradient(circle, #ac166b 0%, rgba(27, 5, 19, 0.533) 100%);
-    background-color: #1f0012;
+    background: radial-gradient(circle, #F47DBB 0%, #D56094 100%);
     color: #fde4f2;
     width: 100%;
     height: 94vh;
@@ -78,17 +80,37 @@ main {
 main > img#nic {
     display: block;
     margin: auto;
-    width: 300px;
+    margin-top: 50px;
+    width: 240px;
+    animation: appear 0.8s linear;
+    transition: 0.5s;
+}
+
+main > img#nic:hover {
+    width: 245px;
+}
+
+p > span {
+    font-weight: bold;
 }
 
 main h2 {
+    cursor: default;
     text-align: center;
+    font-weight: 300;
     padding: 10px;
+    animation: appear 0.8s linear;
+    transition: 0.5s;
+}
+
+main h2:hover {
+    text-shadow: 0px 0px 20px white;
 }
 
 main p {
     text-align: justify;
     padding: 10px;
+    animation: appear 0.8s linear;
 }
 
 section#biblio {
@@ -113,6 +135,7 @@ form {
 form > input#data {
     background: transparent;
     border: none;
+    border-radius: none;
     outline: none;
     color: #eea1cd;
     border-bottom: 1px solid #e68bbe;
@@ -143,8 +166,8 @@ button {
 }
 
 button:hover {
-    background: #ac166b;
-    color: #f9cee7;
+    background: rgb(177, 46, 118);
+    color: #ffffff;
     border: none;
     padding: 12px;
 }
@@ -155,11 +178,12 @@ section#res {
 }
 
 section#res article {
+    animation: appear 0.7s linear;
     display: none; /* Inicialmente escondido */
     border-radius: 40px 40px 0px 0px;
     padding: 20px;
     color: #fde4f2;
-    background-color: #1f0012;
+    background-color: #ac166b;
 }
 
 section article {
@@ -167,7 +191,8 @@ section article {
     border-radius: 40px 40px 0px 0px;
     padding: 20px;
     color: #fde4f2;
-    background-color: #1f0012;
+    background: radial-gradient(circle, #F47DBB 0%, #D56094 100%);
+    background-color: #ac166b;
 }
 
 section#biblio h3 {
@@ -201,10 +226,16 @@ p#para {
 }
 
 video#video {
+    animation: appear 1s linear;
     display: block;
     margin: auto;
     width: 200px;
     border-radius: 20px;
-    border: 2px solid #e68bbe;
+    border: 2px solid #f9cee7;
     box-shadow: 0px 0px 20px #ffaadac7;
+}
+
+@keyframes appear { 
+    from {opacity: 0; scale: 0.8;} 
+    to {opacity: 1; scale: 1;}
 }
